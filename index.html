@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PitchTag Studio — soccer video tagging & AI highlights for coaches</title>
+<meta name="description" content="Tag every play, export highlight reels and let AI find the goals — on your own computer. Buy once, no subscription. Windows & Mac.">
+<meta property="og:title" content="PitchTag Studio"><meta property="og:description" content="Soccer video tagging, highlight reels and AI highlights — buy once, no subscription."><meta property="og:image" content="img/s2_tag.jpg">
+<link rel="icon" href="img/icon.png">
+<style>
+:root{--bg:#0e1116;--panel:#161b22;--line:#2b3440;--text:#e8edf3;--dim:#93a1b2;--accent:#2ecc71;--gold:#f5c518}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,"Segoe UI","Hiragino Sans","Yu Gothic UI",sans-serif}
+a{color:var(--accent)}.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+header{display:flex;align-items:center;gap:12px;padding:16px 0}header img{width:36px;height:36px;border-radius:8px}header b{font-size:18px}header b span{color:var(--accent)}
+.sp{flex:1}.lang button{background:none;border:1px solid var(--line);color:var(--dim);border-radius:6px;padding:4px 10px;cursor:pointer}.lang button.on{color:var(--text);border-color:var(--accent)}
+.hero{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:center;padding:40px 0 60px}
+h1{font-size:44px;line-height:1.15;margin:0 0 16px}h1 em{font-style:normal;color:var(--accent)}h2{font-size:30px;margin:0 0 18px}
+.lead{color:var(--dim);font-size:18px}.btns{display:flex;gap:12px;flex-wrap:wrap;margin:24px 0 10px}
+.btn{display:inline-block;padding:13px 22px;border-radius:10px;font-weight:700;text-decoration:none;border:1px solid var(--line);color:var(--text)}
+.btn.primary{background:#27ae60;border-color:#27ae60;color:#fff}.small{font-size:13px;color:var(--dim)}
+.shot{width:100%;border-radius:12px;border:1px solid var(--line);box-shadow:0 20px 60px rgba(0,0,0,.5)}
+section{padding:56px 0;border-top:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:20px}
+.card h3{margin:0 0 8px;font-size:18px}.card p{margin:0;color:var(--dim)}
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;margin:40px 0}.feat:nth-child(even) .ftxt{order:2}
+.price{display:grid;grid-template-columns:1fr 1fr;gap:20px}.price .card{padding:28px}.big{font-size:44px;font-weight:800}.big s{font-size:22px;color:var(--dim);font-weight:400}
+ul.check{list-style:none;padding:0;margin:14px 0}ul.check li{padding:4px 0}ul.check li:before{content:"✓ ";color:var(--accent);font-weight:700}
+details{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin:10px 0}summary{cursor:pointer;font-weight:700}
+footer{padding:40px 0;color:var(--dim);font-size:14px;border-top:1px solid var(--line)}
+[data-l="ja"]{display:none}html[lang="ja"] [data-l="ja"]{display:revert}html[lang="ja"] [data-l="en"]{display:none}
+@media(max-width:820px){.hero,.feat,.price{grid-template-columns:1fr}.grid{grid-template-columns:1fr}h1{font-size:34px}.feat:nth-child(even) .ftxt{order:0}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header><img src="img/icon.png" alt=""><b>PitchTag <span>Studio</span></b><div class="sp"></div>
+<div class="lang"><button data-set="en">EN</button> <button data-set="ja">日本語</button></div></header>
+
+<div class="hero">
+ <div>
+  <h1 data-l="en">Your match video, turned into <em>highlights and analysis</em>.</h1>
+  <h1 data-l="ja">試合動画を、<em>ハイライトと分析</em>に。</h1>
+  <p class="lead" data-l="en">Tag every play with one key, export highlight reels and player clips, and let AI find the goals — all on your own computer. Buy once. No subscription.</p>
+  <p class="lead" data-l="ja">キー1つでプレーをタグ付けし、ハイライト動画や選手ごとのプレー集を書き出せます。ゴールなどの見せ場はAIが探します。すべてあなたのパソコンの中で動きます。買い切りで、サブスクではありません。</p>
+  <div class="btns">
+   <a class="btn primary" href="#download"><span data-l="en">Download free trial</span><span data-l="ja">無料体験版をダウンロード</span></a>
+   <a class="btn" href="#pricing"><span data-l="en">Buy — $69 launch price</span><span data-l="ja">購入（発売記念 $69）</span></a>
+  </div>
+  <div class="small" data-l="en">Windows 10/11 · macOS (Apple Silicon) · first match free with every feature</div>
+  <div class="small" data-l="ja">Windows 10/11・macOS（Appleシリコン）・最初の1試合は全機能を無料で</div>
+ </div>
+ <img class="shot" src="img/s2_tag.jpg" alt="Tagging screen">
+</div>
+</div>
+
+<section><div class="wrap">
+ <div class="grid">
+  <div class="card"><h3 data-l="en">⌨️ Tag at match speed</h3><h3 data-l="ja">⌨️ 試合のスピードでタグ付け</h3>
+   <p data-l="en">Type the jersey number, press G for goal, S for shot… Tags are saved a second before your keypress, so you never miss the moment.</p>
+   <p data-l="ja">背番号を打って、Gでゴール、Sでシュート…。押した1秒前の時刻で記録されるので、決定的な瞬間を逃しません。</p></div>
+  <div class="card"><h3 data-l="en">🎬 Highlight reels in minutes</h3><h3 data-l="ja">🎬 ハイライト動画を数分で</h3>
+   <p data-l="en">By play, by player, your own picks or AI moments. Review every clip, edit captions, export in 720p, 1080p, 4K or original.</p>
+   <p data-l="ja">プレー別・選手別・自分で選んだ場面・AIの場面から。クリップを1つずつ確認してテロップを直し、720p〜4K・元の画質で書き出せます。</p></div>
+  <div class="card"><h3 data-l="en">✨ AI finds the big moments</h3><h3 data-l="ja">✨ AIが見せ場を発見</h3>
+   <p data-l="en">Crowd and bench reactions, the ball and how players gather — analysed on your computer for free. Optional Gemini mode for higher accuracy and YouTube links.</p>
+   <p data-l="ja">観客やベンチの反応、ボール、選手の集まり方をパソコン内で無料解析。より高精度なGeminiモード（YouTubeのURLにも対応）も選べます。</p></div>
+ </div>
+
+ <div class="feat"><div class="ftxt"><h2 data-l="en">Several files, one match</h2><h2 data-l="ja">複数のファイルも1試合に</h2>
+  <p class="lead" data-l="en">Filmed each half separately? Add both files and they play as one 100-minute timeline. Drag the timeline to scrub, change speed, skip ±5/±10 s.</p>
+  <p class="lead" data-l="ja">前半・後半を別々に撮っても大丈夫。ファイルを追加すれば、合計100分まで1本のタイムラインとして再生します。タイムラインのドラッグ、速度変更、±5・±10秒移動に対応。</p></div>
+  <img class="shot" src="img/s6_list.jpg" alt=""></div>
+ <div class="feat"><div class="ftxt"><h2 data-l="en">Review before you export</h2><h2 data-l="ja">書き出す前に1つずつ確認</h2>
+  <p class="lead" data-l="en">Watch each clip, drop the ones you don't need and fix the captions. Then save a single MP4 to share with your team.</p>
+  <p class="lead" data-l="ja">クリップを再生して、不要な場面を外し、テロップを直してから、1本のMP4に書き出してチームで共有できます。</p></div>
+  <img class="shot" src="img/s4_review.jpg" alt=""></div>
+ <div class="feat"><div class="ftxt"><h2 data-l="en">Free match analysis</h2><h2 data-l="ja">無料の試合分析</h2>
+  <p class="lead" data-l="en">Attacking sides, a pitch heat map, player involvement and the plays that led to goals — straight from your tags. Add an AI-written report with your Gemini key.</p>
+  <p class="lead" data-l="ja">攻撃サイドの割合、ヒートマップ、選手の関与、失点前のプレーをタグから自動集計。Geminiキーがあれば、AIが文章のレポートも書きます。</p></div>
+  <img class="shot" src="img/s5_analysis.jpg" alt=""></div>
+</div></section>
+
+<section id="pricing"><div class="wrap">
+ <h2 data-l="en">Buy once. Use it every weekend.</h2><h2 data-l="ja">一度買えば、毎週末ずっと使える。</h2>
+ <div class="price">
+  <div class="card"><h3 data-l="en">Free trial</h3><h3 data-l="ja">無料体験</h3><div class="big">$0</div>
+   <ul class="check"><li data-l="en">1 match with every feature</li><li data-l="ja">1試合ぶん全機能</li><li data-l="en">Tagging, export, AI highlights, analysis</li><li data-l="ja">タグ付け・書き出し・AIハイライト・分析</li></ul>
+   <a class="btn" href="#download"><span data-l="en">Download</span><span data-l="ja">ダウンロード</span></a></div>
+  <div class="card" style="border-color:#27ae60"><h3>PitchTag Studio</h3><div class="big">$69 <s>$89</s></div>
+   <ul class="check"><li data-l="en">Unlimited matches, forever</li><li data-l="ja">試合数無制限・ずっと使える</li>
+    <li data-l="en">2 computers (Windows / Mac)</li><li data-l="ja">パソコン2台まで（Windows/Mac）</li>
+    <li data-l="en">Free updates for 1 year</li><li data-l="ja">1年間の無料アップデート</li>
+    <li data-l="en">No subscription · no server fees</li><li data-l="ja">サブスクなし・サーバー代なし</li></ul>
+   <a class="btn primary" id="buy" href="https://pitchtag.lemonsqueezy.com"><span data-l="en">Buy license</span><span data-l="ja">ライセンスを購入</span></a>
+   <div class="small" style="margin-top:8px" data-l="en">Secure checkout by Lemon Squeezy. Your license key arrives by email.</div>
+   <div class="small" style="margin-top:8px" data-l="ja">決済はLemon Squeezy（安全な決済代行）。ライセンスキーはメールで届きます。</div></div>
+ </div>
+</div></section>
+
+<section id="download"><div class="wrap">
+ <h2 data-l="en">Download</h2><h2 data-l="ja">ダウンロード</h2>
+ <div class="btns">
+  <a class="btn primary" href="https://github.com/takawmd2524-boop/pitchtag-studio/releases/latest/download/PitchTag-Studio-win-x64-setup.exe">Windows (64-bit)</a>
+  <a class="btn primary" href="https://github.com/takawmd2524-boop/pitchtag-studio/releases/latest/download/PitchTag-Studio-mac-arm64.dmg">macOS (Apple Silicon)</a>
+ </div>
+ <p class="small" data-l="en">Windows may show "Windows protected your PC" for new apps: click "More info" → "Run anyway". The Mac version is signed and notarized by Apple.</p>
+ <p class="small" data-l="ja">Windowsでは新しいアプリに「WindowsによってPCが保護されました」と表示されることがあります。「詳細情報」→「実行」を押してください。Mac版はAppleの公証済みです。</p>
+</div></section>
+
+<section><div class="wrap">
+ <h2>FAQ</h2>
+ <details><summary data-l="en">Do my videos get uploaded?</summary><summary data-l="ja">動画はアップロードされますか？</summary>
+  <p data-l="en">No. Everything runs on your computer. Only if you turn on the optional Gemini mode is a low-resolution copy sent to Google with your own API key, and only for the analysis.</p>
+  <p data-l="ja">いいえ。すべてパソコン内で処理します。任意のGeminiモードをオンにした場合だけ、解析のために低解像度のコピーをあなた自身のAPIキーでGoogleに送ります。</p></details>
+ <details><summary data-l="en">What is the Gemini key and does it cost money?</summary><summary data-l="ja">Geminiキーとは？お金はかかりますか？</summary>
+  <p data-l="en">A free key from Google AI Studio (aistudio.google.com/apikey). The free tier is usually enough for a few matches a day. It's optional — local AI works without it.</p>
+  <p data-l="ja">Google AI Studio（aistudio.google.com/apikey）で無料で取得できるキーです。通常は無料枠で1日数試合は解析できます。任意で、なくてもパソコン内のAIは使えます。</p></details>
+ <details><summary data-l="en">Can I use YouTube links?</summary><summary data-l="ja">YouTubeのURLは使えますか？</summary>
+  <p data-l="en">Yes for tagging, analysis and AI highlights (Gemini mode). Highlight videos can't be exported from YouTube — use a video file for that.</p>
+  <p data-l="ja">タグ付け・分析・AIハイライト（Geminiモード）に使えます。ハイライト動画の書き出しは、パソコン内の動画ファイルが必要です。</p></details>
+ <details><summary data-l="en">How accurate is the free local AI?</summary><summary data-l="ja">無料のパソコン内AIの精度は？</summary>
+  <p data-l="en">It finds candidate moments from crowd/bench reactions, the ball and player movement. It works best with a steady camera and audible reactions. You always review clips before exporting.</p>
+  <p data-l="ja">観客・ベンチの反応、ボール、選手の動きから候補の場面を探します。カメラが安定していて、歓声が入っている動画で最もよく働きます。書き出す前に必ず場面を確認できます。</p></details>
+ <details><summary data-l="en">Refunds?</summary><summary data-l="ja">返金はできますか？</summary>
+  <p data-l="en">Try the free match first. If it doesn't work for you after buying, email us within 14 days for a full refund.</p>
+  <p data-l="ja">まず無料の1試合でお試しください。購入後14日以内であれば、メールで全額返金に応じます。</p></details>
+</div></section>
+
+<footer><div class="wrap">© 2026 TAKAHIKO SOMA · <a href="privacy.html">Privacy</a> · <a href="terms.html">License terms</a> · <a href="mailto:takawmd2524@gmail.com">Support</a></div></footer>
+<script>
+(function(){var l;try{l=localStorage.getItem("lang")}catch(e){}if(!l)l=(navigator.language||"en").slice(0,2)==="ja"?"ja":"en";
+function set(x){document.documentElement.lang=x;document.querySelectorAll(".lang button").forEach(function(b){b.className=b.dataset.set===x?"on":""});try{localStorage.setItem("lang",x)}catch(e){}}
+document.querySelectorAll(".lang button").forEach(function(b){b.onclick=function(){set(b.dataset.set)}});set(l);})();
+</script>
+</body></html>
